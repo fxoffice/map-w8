@@ -15,6 +15,11 @@ function performAction(url) {
             } else {
                 alert(data);
             }
+            if (data === "moveMapToMyko()") {
+                moveMapToMyko();
+            } else {
+                alert(data);
+            }
         })
         .catch(error => console.error('Помилка:', error));
 }
