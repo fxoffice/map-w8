@@ -22,7 +22,7 @@ def action3():
 
 @app.route("/action4")
 def action4():
-    return "Дія для кнопки 4 виконується"
+    return "moveMapToMyko()"
 
 @app.route("/action5")
 def action5():
