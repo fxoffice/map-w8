@@ -14,7 +14,7 @@ def action1():
 
 @app.route("/action2")
 def action2():
-    return "Дія для кнопки 2 виконується"
+    return "moveMapToLviv()"
 
 @app.route("/action3")
 def action3():
