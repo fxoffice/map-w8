@@ -12,27 +12,37 @@ function performAction(url) {
         .then(data => {
             if (data === "moveMapToLviv()") {
                 moveMapToLviv();
-            } else {
-                alert(data);
-            }
-            if (data === "moveMapToMyko()") {
+            } else if (data === "moveMapToMyko()") {
                 moveMapToMyko();
+            } else if (data === "moveMapToTernopil()") { // Обробка тільки для кнопки 4
+                moveMapToTernopil();
             } else {
-                alert(data);
+                alert(data); // Відображаємо повідомлення для всіх інших відповідей
             }
         })
         .catch(error => console.error('Помилка:', error));
 }
 
+// Функція для переміщення карти до Львова
 function moveMapToLviv() {
     map.flyTo({
         center: [24.0316, 49.8429], // Координати Львова
         zoom: 12 // Новий рівень масштабу
     });
 }
+
+// Функція для переміщення карти до Миколаєва
 function moveMapToMyko() {
     map.flyTo({
         center: [31.9946, 46.9677], // Координати Миколаєва
+        zoom: 12 // Новий рівень масштабу
+    });
+}
+
+// Функція для переміщення карти до Тернополя (лише для кнопки 4)
+function moveMapToTernopil() {
+    map.flyTo({
+        center: [25.5948, 49.5535], // Координати Тернополя
         zoom: 12 // Новий рівень масштабу
     });
 }
