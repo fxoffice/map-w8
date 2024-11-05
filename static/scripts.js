@@ -25,3 +25,9 @@ function moveMapToLviv() {
         zoom: 12 // Новий рівень масштабу
     });
 }
+function moveMapToMyko() {
+    map.flyTo({
+        center: [24.0316, 49.8429], // Координати Львова
+        zoom: 12 // Новий рівень масштабу
+    });
+}
