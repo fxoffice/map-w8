@@ -32,7 +32,7 @@ function moveMapToLviv() {
 }
 function moveMapToMyko() {
     map.flyTo({
-        center: [24.0316, 49.8429], // Координати Львова
+        center: [31.9946, 46.9677], // Координати Миколаєва
         zoom: 12 // Новий рівень масштабу
     });
 }
